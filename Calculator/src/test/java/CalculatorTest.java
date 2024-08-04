@@ -36,4 +36,10 @@ public class CalculatorTest {
         System.out.println("Test multiply method");
     }
 
+    @Test
+    public void testDevide() {
+        assertEquals(1.5, calculator.devide(3, 2));
+        System.out.println("Test devide method");
+    }
+
 }
