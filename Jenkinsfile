@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh """
                 pwd
-                cd $WORKSPACE/Calculator"
+                cd Calculator/
                 mvn clean compile
                 """
             }
