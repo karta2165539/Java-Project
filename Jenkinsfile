@@ -1,19 +1,23 @@
 pipeline {
     agent any
     stages {
-        dir('Calculator') {
-            stage('Build') {
-                steps {
+        stage('Build') {
+            steps {
+                dir('Calculator') {
                     sh "mvn clean compile"
                 }
             }
-            stage('Test') {
-                steps {
+        }
+        stage('Test') {
+            steps {
+                dir('Calculator') {
                     sh "mvn test"
                 }
             }
-            stage('Deploy') {
-                steps {
+        }
+        stage('Deploy') {
+            steps {
+                dir('Calculator') {
                     sh "mvn package"
                 }
             }
