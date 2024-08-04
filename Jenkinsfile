@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh "cd $WORKSPACE/Calculator"
                 sh "mvn clean compile"
             }
         }
